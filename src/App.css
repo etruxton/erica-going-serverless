@@ -1,7 +1,18 @@
-.App {
-  text-align: center;
+body {
+  /*background-image: url("https://wallpapercave.com/wp/wp4303638.jpg");*/
+  background-color: #4086cc;
+  height: 100vh;
+  overflow: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
 }
-
+.App {
+  display: flex;
+  justify-content: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

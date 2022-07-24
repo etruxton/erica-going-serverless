@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import "./App.css"
 function App() {
+  const [input, setInput] = useState([{ text: ""}]);
+
+  // handle input change
+  const handleInputChange = (e, index) => {
+    const { name, value } = e.target;
+    const list = [...input];
+    list[index][name] = value;
+    setInput(list);
+  };
+  const json = JSON.stringify(input);
+  const obj = JSON.parse(json);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <body>
+      <h1 class="App">Erica Going Serverless</h1>
+      {input.map((x, i) => {
+        return (
+          <div class="App">
+            <input
+              name="text"
+              placeholder="Enter text"
+              value={x.text}
+              onChange={e => handleInputChange(e, i)}
+            />
+          </div>
+        );
+      })}
+      <h2 class="App">{obj[0].text}</h2>
+    </body>
   );
 }
 
