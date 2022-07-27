@@ -8,15 +8,15 @@ body {
   background-size: cover;
   position: relative;
   color: #33FF33;
-  font-family: 'silkscr';      
+  font-family: 'minecraft';      
 }
 .textInput {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 .textOutput {
   display: flex;
-  justify-content: center;
+  justify-content: Center;
   white-space: pre-wrap;
   text-align: center;
 }
@@ -25,6 +25,7 @@ body {
   justify-content: space-around;
 }
 @font-face {
-  font-family: 'silkscr';
-  src: url('slkscr.ttf');
+  font-family: 'minecraft';
+  src: url('minecraft.ttf');
+
 }
